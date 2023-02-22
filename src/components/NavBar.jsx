@@ -3,7 +3,7 @@ import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-toggler sticky-top text-white bg-dark b-radius-0">
+    <nav className="navbar navbar-toggler sticky-top text-white bg-dark rounded-0">
       <div className="d-flex">
         <span className="material-symbols-outlined me-2">fitness_center</span>
         <h1 className="navbar-brand text-white font-italic spacing-2px">
