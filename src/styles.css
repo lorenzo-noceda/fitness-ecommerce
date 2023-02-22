@@ -1,0 +1,25 @@
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  height: 650px;
+}
+
+.spacing-2px {
+  letter-spacing: 2px;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.material-symbols-outlined {
+  font-size: 40px;
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 48;
+}
+
+.max-h-500 {
+  max-height: 500px;
+}
+
+.b-radius-0 {
+  border-radius: 0;
+}
