@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Producto 1",
+    "price": 1500,
+    "image": "https://www.nutrishop.com.ar/Temp/App_WebSite/App_PictureFiles/Items/3196_400.jpg",
+    "initial": 1,
+    "stock": 12
+  },
+  {
+    "id": 2,
+    "name": "Producto 2",
+    "price": 1000,
+    "image": "https://www.nutrishop.com.ar/Temp/App_WebSite/App_PictureFiles/Items/543_800.jpg",
+    "initial": 1,
+    "stock": 14
+  },
+  {
+    "id": 3,
+    "name": "Producto 3",
+    "price": 2500,
+    "image": "https://www.nutrishop.com.ar/Temp/App_WebSite/App_PictureFiles/Items/1824_400.jpg",
+    "initial": 1,
+    "stock": 18
+  },
+  {
+    "id": 4,
+    "name": "Producto 4",
+    "price": 1500,
+    "image": "https://www.nutrishop.com.ar/Temp/App_WebSite/App_PictureFiles/Items/10000_400.jpg",
+    "initial": 1,
+    "stock": 4
+  },
+  {
+    "id": 5,
+    "name": "Producto 5",
+    "price": 1000,
+    "image": "https://www.nutrishop.com.ar/Temp/App_WebSite/App_PictureFiles/Items/6508_800.jpg",
+    "initial": 1,
+    "stock": 6
+  },
+  {
+    "id": 6,
+    "name": "Producto 6",
+    "price": 2500,
+    "image": "https://www.nutrishop.com.ar/Temp/App_WebSite/App_PictureFiles/Items/528_800.jpg",
+    "initial": 5,
+    "stock": 30
+  }
+]

@@ -20,6 +20,31 @@ body {
   max-height: 600px;
 }
 
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.card {
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  max-width: 300px;
+}
+
+.card-price {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   width: 10%;
@@ -44,4 +69,17 @@ body {
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   opacity: 0.5;
+}
+
+.title {
+  font-style: italic;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.compra-minima-mayor {
+  text-align: center;
+  margin: -15px;
+  font-style: italic;
 }

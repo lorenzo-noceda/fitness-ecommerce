@@ -6,9 +6,9 @@ const NavBar = () => {
     <nav className="navbar navbar-toggler sticky-top text-white bg-dark rounded-0">
       <div className="d-flex">
         <span className="material-symbols-outlined me-2">fitness_center</span>
-        <h1 className="navbar-brand text-white font-italic spacing-2px">
+        <h2 className="navbar-brand text-white font-italic spacing-2px">
           PROTESHOP
-        </h1>
+        </h2>
       </div>
       <div className="me-4">
         <button className="btn btn-dark btn-outline-light mx-2">BOTON 1</button>
