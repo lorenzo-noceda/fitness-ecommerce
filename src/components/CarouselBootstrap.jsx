@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 const CarouselBootstrap = () => {
   return (
-    <Carousel fade interval={3000}>
+    <Carousel fade interval={3000} className="pb-0">
       <Carousel.Item>
         <img
           className="d-block w-100 max-h-600"

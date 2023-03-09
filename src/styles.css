@@ -3,6 +3,28 @@ body {
   height: 650px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+i {
+  font-size: 30px;
+  margin: 0 5px;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
 .spacing-2px {
   letter-spacing: 2px;
 }
@@ -35,14 +57,15 @@ body {
 
 .card-img-top {
   margin: 0 auto;
-  border-bottom: 2px solid black;
-  max-width: 300px;
+  max-width: 275px;
+  max-height: 275px;
 }
 
 .card-price {
   text-align: center;
   font-weight: bolder;
   font-size: 1.5rem;
+  margin-top: -5px 0;
 }
 
 .carousel-control-prev,
@@ -78,8 +101,8 @@ body {
   margin: 1rem;
 }
 
-.compra-minima-mayor {
+.compra-minima {
   text-align: center;
-  margin: -15px;
+  margin: -10px;
   font-style: italic;
 }

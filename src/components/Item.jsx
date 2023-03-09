@@ -1,30 +1,19 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import ItemCount from "./ItemCount";
+import { Card, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const Item = ({ name, id, price, image, initial, stock }) => {
-  const onAdd = (quantity) => {
-    const totalPrice = quantity * price;
-
-    console.log(
-      quantity == 1
-        ? `Seleccionaste ${quantity} unidad. En total es ${totalPrice}`
-        : `Seleccionaste ${quantity} unidades. En total es ${totalPrice}`
-    );
-  };
+const Item = ({ name, id, category, image }) => {
   return (
-    <Col>
-      <Card key={id}>
+    <Col key={id}>
+      <Card>
         <Card.Img variant="top" src={image} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <p className="card-price">💸{price}</p>
-          <ItemCount stock={stock} initial={initial} onAdd={onAdd} />
+          <Card.Text>Categoria: {category}</Card.Text>
+          <hr />
+          <Link to={`/catalogue/${id}`}>
+            <Button className="d-block mx-auto px-4 py-1 fs-5">Detalles</Button>
+          </Link>
         </Card.Body>
       </Card>
     </Col>

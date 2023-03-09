@@ -1,6 +1,5 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import { Container, Row } from "react-bootstrap";
 import Item from "./Item";
 
 const ItemList = ({ products }) => {
@@ -9,12 +8,11 @@ const ItemList = ({ products }) => {
       <Row>
         {products.map((product) => (
           <Item
-            key={product.id}
+            id={product.id}
             name={product.name}
-            price={product.price}
             image={product.image}
-            initial={product.initial}
-            stock={product.stock}
+            category={product.category}
+            key={product.id}
           />
         ))}
       </Row>

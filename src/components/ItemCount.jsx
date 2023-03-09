@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
+import { Button, ButtonGroup } from "react-bootstrap";
 
-const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
+const ItemCount = ({ stock = 0, initial = 1 }) => {
   let [count, setCount] = useState(initial);
 
   const decreaseCounter = () => {
@@ -32,12 +31,11 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
         </ButtonGroup>
         <ButtonGroup>
           <Button
-            variant="outline-success"
+            variant="outline-primary"
             className="px-3 text-center"
             disabled={count == 0 || initial > stock || count < initial}
             onClick={() => {
               if (count <= stock && stock >= initial && count >= initial) {
-                onAdd(count);
                 setCount(0);
               }
             }}
@@ -46,7 +44,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
           </Button>
         </ButtonGroup>
       </div>
-      <p className="compra-minima-mayor">
+      <p className="compra-minima">
         {initial > 1 ? `-Compra minima: ${initial} unidades-` : ""}
       </p>
     </div>
