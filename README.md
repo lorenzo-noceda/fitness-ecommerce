@@ -14,8 +14,8 @@ Es la recreación de un típico E-commerce referido a suplementos deportivos. En
 - Eventos
 - y muchos otros temas más.
 
-Espero les guste. Ante cualquier duda tienen mi LinkedIn a su disposición para contactarme
+![website gif](https://github.com/LorenzoN19/fitness-ecommerce/blob/main/public/ecommerce-gif.gif?raw=true)
+
+Espero les guste. Ante cualquier duda tienen mi LinkedIn a su disposición para contactarme. Muchas gracias.
 
 [LinkedIn](https://www.linkedin.com/in/lorenzo-noceda-a223261a1/)
-
-Gracias por su tiempo.
