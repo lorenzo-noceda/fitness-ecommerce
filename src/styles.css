@@ -106,3 +106,18 @@ i {
   margin: -10px;
   font-style: italic;
 }
+
+.cart-minus-btn {
+  border-radius: 0%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cart-img {
+  width: 120px;
+  margin-bottom: -15px;
+}
+
+.indent {
+  text-indent: 5%;
+}

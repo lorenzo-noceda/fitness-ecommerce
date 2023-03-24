@@ -14,18 +14,14 @@ const ItemListContainer = ({ greeting }) => {
       .catch((err) => console.log(err));
   }, []);
 
-  let productsFiltered = products.filter(
-    (product) => product.category == category
-  );
+  if (category) {
+    products = products.filter((product) => product.category == category);
+  }
 
   return (
     <>
       <h2 className="text-center font-italic lead fs-3 my-3">{greeting}</h2>
-      {category ? (
-        <ItemList products={productsFiltered} />
-      ) : (
-        <ItemList products={products} />
-      )}
+      <ItemList products={products} />
     </>
   );
 };

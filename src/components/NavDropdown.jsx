@@ -12,17 +12,21 @@ const NavDropdown = () => {
 
         <Dropdown.Menu className="text-center">
           <Link to="/category/Proteina">
-            <Dropdown.Item href="#/" className="btn btn-light fs-5">
+            <Dropdown.Item href="#/" className="btn btn-light fs-5" as="li">
               Proteina
             </Dropdown.Item>
           </Link>
           <Link to="/category/Creatina">
-            <Dropdown.Item href="#/" className="btn btn-light fs-5 my-2">
+            <Dropdown.Item
+              href="#/"
+              className="btn btn-light fs-5 my-2"
+              as="li"
+            >
               Creatina
             </Dropdown.Item>
           </Link>
           <Link to="/category/Snacks">
-            <Dropdown.Item href="#/" className="btn btn-light fs-5 ">
+            <Dropdown.Item href="#/" className="btn btn-light fs-5" as="li">
               Snacks
             </Dropdown.Item>
           </Link>

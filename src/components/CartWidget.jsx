@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/ShoppingCartProvider";
 
 const CartWidget = () => {
+  let { totalProducts } = useContext(CartContext);
+
   return (
     <div className="px-5">
-      <Link to="/cart">
-        <button className="btn btn-dark btn-outline-light btn-sm">
+      <button className="btn btn-dark btn-sm p-0" disabled={totalProducts == 0}>
+        <Link to="/cart" className="btn btn-outline-light btn-sm">
           <span className="material-symbols-outlined">shopping_cart</span>
-          <span>3</span>
-        </button>
-      </Link>
+          <span>{totalProducts}</span>
+        </Link>
+      </button>
     </div>
   );
 };
