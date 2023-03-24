@@ -57,11 +57,11 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
         {initial > 1 && `-Compra minima: ${initial} unidades-`}
       </p>
       {cart.length >= 1 && (
-        <Link to="/cart">
-          <Button variant="outline-primary mt-4 px-5 d-block mx-auto">
-            Ir al carrito
-          </Button>
-        </Link>
+        <div className="text-center">
+          <Link to="/cart">
+            <Button variant="outline-primary mt-3 px-4">Ir al carrito</Button>
+          </Link>
+        </div>
       )}
     </div>
   );

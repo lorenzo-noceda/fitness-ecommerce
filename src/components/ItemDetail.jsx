@@ -19,11 +19,13 @@ const ItemDetail = ({ name, image, id, price, initial, stock, onAdd }) => {
           <ItemCount stock={stock} initial={initial} onAdd={onAdd} />
         </Card.Body>
       </Card>
-      <Link to="/catalogue" className="d-flex justify-content-center">
-        <Button variant="outline-light text-dark font-italic my-3">
-          Volver al catalogo
-        </Button>
-      </Link>
+      <div className="text-center">
+        <Link to="/catalogue">
+          <Button variant="outline-light text-dark font-italic my-3">
+            Volver al catalogo
+          </Button>
+        </Link>
+      </div>
     </>
   );
 };

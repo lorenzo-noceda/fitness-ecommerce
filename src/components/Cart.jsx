@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Form, Button, ButtonGroup, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/ShoppingCartProvider";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const {
@@ -12,6 +14,27 @@ const Cart = () => {
     totalProducts,
     totalPrice,
   } = useContext(CartContext);
+
+  const navigate = useNavigate();
+
+  const clearCartQuestion = () => {
+    Swal.fire({
+      icon: "warning",
+      text: "¿Está seguro que desea limpiar el carrito?",
+      showCancelButton: true,
+      confirmButtonText: "Si",
+      cancelButtonText: "No",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        clearCart();
+        navigate("/catalogue");
+        Swal.fire({
+          icon: "success",
+          text: "El carrito fue limpiado",
+        });
+      }
+    });
+  };
 
   return (
     <Container className="mb-5 pt-4">
@@ -80,11 +103,9 @@ const Cart = () => {
           />
         </Form.Group>
         <Button variant="success fs-5 px-4">Comprar</Button>
-        <Link to="/catalogue">
-          <Button variant="danger fs-5 mx-3" onClick={() => clearCart()}>
-            Limpiar carrito
-          </Button>
-        </Link>
+        <Button variant="danger fs-5 mx-3" onClick={() => clearCartQuestion()}>
+          Limpiar carrito
+        </Button>
       </Form>
     </Container>
   );
