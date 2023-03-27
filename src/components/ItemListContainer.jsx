@@ -11,33 +11,29 @@ const ItemListContainer = ({ greeting }) => {
   let [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      const db = getFirestore();
-      const itemsCollection = collection(db, "suplementos");
-      getDocs(itemsCollection)
-        .then((snapshot) => {
-          const docs = snapshot.docs.map((doc) => doc.data());
-          setProducts(docs);
-        })
-        .catch((err) => console.log(err));
+    const db = getFirestore();
+    const itemsCollection = collection(db, "suplementos");
+    getDocs(itemsCollection)
+      .then((snapshot) => {
+        const docs = snapshot.docs.map((doc) => doc.data());
+        setProducts(docs);
+      })
+      .catch((err) => console.log(err));
 
-      setLoading(false);
-    }, 750);
+    setLoading(false);
   }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
 
   if (category) {
     products = products.filter((product) => product.category == category);
   }
 
-  return (
-    <>
+  return loading ? (
+    <Loading />
+  ) : (
+    <div className="min-vh-100">
       <h2 className="text-center font-italic lead fs-3 my-3">{greeting}</h2>
       <ItemList className="vh-100" products={products} />
-    </>
+    </div>
   );
 };
 

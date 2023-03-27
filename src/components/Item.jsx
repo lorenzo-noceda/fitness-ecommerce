@@ -12,7 +12,12 @@ const Item = ({ name, id, category, image }) => {
           <Card.Text>Categoria: {category}</Card.Text>
           <hr />
           <Link to={`/catalogue/${id}`}>
-            <Button className="d-block mx-auto px-4 py-1 fs-5">Detalles</Button>
+            <Button
+              className="d-block mx-auto px-4 py-1 fs-5"
+              onClick={() => scrollTo(0, 0)}
+            >
+              Detalles
+            </Button>
           </Link>
         </Card.Body>
       </Card>

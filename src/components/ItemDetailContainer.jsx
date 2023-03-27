@@ -16,38 +16,35 @@ const ItemDetailContainer = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      const db = getFirestore();
-      const oneItem = doc(db, "suplementos", `${id}`);
-      getDoc(oneItem)
-        .then((snapshot) => {
-          if (snapshot.exists()) {
-            const docs = snapshot.data();
-            console.log(product);
-            setProduct(docs);
-          }
-        })
-        .catch((err) => console.log(err));
+    const db = getFirestore();
+    const oneItem = doc(db, "suplementos", `${id}`);
+    getDoc(oneItem)
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const docs = snapshot.data();
+          setProduct(docs);
+        }
+      })
+      .catch((err) => console.log(err));
 
-      setLoading(false);
-    }, 500);
+    setLoading(false);
   }, []);
 
-  if (loading) {
-    return <Loading />;
-  }
-
-  return (
-    <ItemDetail
-      name={product.name}
-      id={product.id}
-      image={product.image}
-      price={product.price}
-      stock={product.stock}
-      initial={product.initial}
-      description={product.description}
-      onAdd={onAdd}
-    />
+  return loading ? (
+    <Loading />
+  ) : (
+    <div className="min-vh-100">
+      <ItemDetail
+        name={product.name}
+        id={product.id}
+        image={product.image}
+        price={product.price}
+        stock={product.stock}
+        initial={product.initial}
+        description={product.description}
+        onAdd={onAdd}
+      />
+    </div>
   );
 };
 

@@ -25,12 +25,10 @@ const ShoppingCartProvider = ({ children }) => {
   };
 
   let totalProducts = 0;
-  cart.map((prod) => (totalProducts += prod.quantity));
+  cart.forEach((prod) => (totalProducts += prod.quantity));
 
   let totalPrice = 0;
-  cart.map((prod) => (totalPrice += prod.price * prod.quantity));
-
-  console.log(cart);
+  cart.forEach((prod) => (totalPrice += prod.price * prod.quantity));
 
   return (
     <CartContext.Provider

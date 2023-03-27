@@ -7,7 +7,11 @@ const CartWidget = () => {
 
   return (
     <div className="px-5">
-      <button className="btn btn-dark btn-sm p-0" disabled={totalProducts == 0}>
+      <button
+        className="btn btn-dark btn-sm p-0"
+        disabled={totalProducts == 0}
+        onClick={() => scrollTo(0, 0)}
+      >
         <Link to="/cart" className="btn btn-outline-light btn-sm">
           <span className="material-symbols-outlined">shopping_cart</span>
           <span>{totalProducts}</span>
