@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { Button, ButtonGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/ShoppingCartProvider";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
   let { cart } = useContext(CartContext);
@@ -29,6 +31,15 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
     }
   };
 
+  const addToCartMessage = () => {
+    toast.success("El producto fue añadido al carrito", {
+      position: "bottom-center",
+      autoClose: 2000,
+      pauseOnHover: false,
+      theme: "colored",
+    });
+  };
+
   return (
     <div>
       <p className="text-center h6">Stock disponible: {stock} unidades</p>
@@ -48,6 +59,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
           disabled={counter == 0 || initial > stock || counter < initial}
           onClick={() => {
             addToCart();
+            addToCartMessage();
           }}
         >
           Agregar al carrito
@@ -59,10 +71,16 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
       {cart.length >= 1 && (
         <div className="text-center">
           <Link to="/cart">
-            <Button variant="outline-primary mt-3 px-4">Ir al carrito</Button>
+            <Button
+              variant="outline-primary mt-3 px-4"
+              onClick={() => scrollTo(0, 0)}
+            >
+              Ir al carrito
+            </Button>
           </Link>
         </div>
       )}
+      <ToastContainer />
     </div>
   );
 };

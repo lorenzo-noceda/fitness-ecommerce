@@ -1,6 +1,4 @@
 import { createContext, useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export const CartContext = createContext(null);
 
@@ -8,15 +6,6 @@ const ShoppingCartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const clearCart = () => setCart([]);
-
-  const addProductMessage = () => {
-    toast.success("El producto fue añadido al carrito", {
-      position: "bottom-center",
-      autoClose: 2000,
-      pauseOnHover: false,
-      theme: "colored",
-    });
-  };
 
   const addProduct = (product, quantity) => {
     let newCart;
@@ -29,7 +18,6 @@ const ShoppingCartProvider = ({ children }) => {
       newCart = [...cart, prod];
     }
     setCart(newCart);
-    addProductMessage();
   };
 
   const removeProduct = (id) => {
@@ -45,22 +33,19 @@ const ShoppingCartProvider = ({ children }) => {
   console.log(cart);
 
   return (
-    <>
-      <CartContext.Provider
-        value={{
-          cart,
-          setCart,
-          clearCart,
-          addProduct,
-          removeProduct,
-          totalProducts,
-          totalPrice,
-        }}
-      >
-        {children}
-      </CartContext.Provider>
-      <ToastContainer />
-    </>
+    <CartContext.Provider
+      value={{
+        cart,
+        setCart,
+        clearCart,
+        addProduct,
+        removeProduct,
+        totalProducts,
+        totalPrice,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
   );
 };
 

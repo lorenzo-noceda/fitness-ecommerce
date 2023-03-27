@@ -40,14 +40,11 @@ const Cart = () => {
     <Container className="mb-5 pt-4">
       <h1 className="text-center lead fs-1 mb-5">Carrito</h1>
       {cart.map((prod) => (
-        <>
+        <div key={prod.id} className="text-center">
           <hr />
-          <div
-            key={prod.id}
-            className="d-flex justify-content-center align-items-center text-center"
-          >
-            <div style={{ width: "200px" }}>
-              <h5 className="text-center">{prod.name}</h5>
+          <div className="d-flex justify-content-center align-items-center">
+            <div className="w-200">
+              <h5>{prod.name}</h5>
               <img src={prod.image} className="cart-img" alt="cart-img" />
               <p className="mt-3 mb-1">Cantidad: {prod.quantity}</p>
               <p className="h6">Total: 💸{prod.price * prod.quantity}</p>
@@ -58,7 +55,7 @@ const Cart = () => {
                   +
                 </Button>
                 <Button variant="dark">{prod.quantity}</Button>
-                <Link to={totalProducts == 1 ? "/catalogue" : ""}>
+                <Link to={totalProducts == 1 && "/catalogue"}>
                   <Button
                     variant="dark cart-minus-btn"
                     onClick={() => {
@@ -85,7 +82,7 @@ const Cart = () => {
               </Button>
             </Link>
           </div>
-        </>
+        </div>
       ))}
       <h4 className="my-3">Total: 💸{totalPrice}</h4>
       <hr />

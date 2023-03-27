@@ -3,17 +3,23 @@ import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ({ name, image, id, price, initial, stock, onAdd }) => {
+const ItemDetail = ({
+  name,
+  image,
+  id,
+  price,
+  description,
+  initial,
+  stock,
+  onAdd,
+}) => {
   return (
     <>
       <Card key={id} className="my-3">
         <Card.Img variant="top" src={image} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
+          <Card.Text>{description}</Card.Text>
           <p className="card-price">💸{price}</p>
           <hr />
           <ItemCount stock={stock} initial={initial} onAdd={onAdd} />
