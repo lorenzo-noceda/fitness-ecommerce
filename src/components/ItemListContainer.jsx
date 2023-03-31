@@ -8,26 +8,26 @@ const ItemListContainer = ({ greeting }) => {
   const { category } = useParams();
 
   let [products, setProducts] = useState([]);
-  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const db = getFirestore();
     const itemsCollection = collection(db, "suplementos");
     getDocs(itemsCollection)
       .then((snapshot) => {
-        const docs = snapshot.docs.map((doc) => doc.data());
+        const docs = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
         setProducts(docs);
       })
       .catch((err) => console.log(err));
-
-    setLoading(false);
   }, []);
 
   if (category) {
     products = products.filter((product) => product.category == category);
   }
 
-  return loading ? (
+  return products.length == 0 ? (
     <Loading />
   ) : (
     <div className="min-vh-100">

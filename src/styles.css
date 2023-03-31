@@ -25,10 +25,6 @@ i {
   height: 50px;
 }
 
-.spacing-2px {
-  letter-spacing: 2px;
-}
-
 .font-italic {
   font-style: italic;
 }
@@ -36,6 +32,12 @@ i {
 .material-symbols-outlined {
   font-size: 40px;
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 48;
+}
+
+.nav-btns {
+  margin-right: 1rem;
+  padding: 0.3em 1.5em;
+  font-size: 20px;
 }
 
 .max-h-600 {
@@ -135,4 +137,11 @@ i {
 
 .w-200 {
   width: 200px;
+}
+
+#logo-title {
+  letter-spacing: 2px;
+  font-style: italic;
+  margin: auto 0;
+  font-weight: 500;
 }

@@ -1,29 +1,34 @@
 import React from "react";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { Navbar, Nav, Button } from "react-bootstrap";
 import NavDropdown from "./NavDropdown";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-toggler sticky-top text-white bg-dark rounded-0">
-      <Link to="/">
-        <div className="d-flex">
+    <Navbar bg="dark" variant="dark sticky-top" expand="md">
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand d-flex align-items-center">
           <span className="material-symbols-outlined me-2">fitness_center</span>
-          <h2 className="navbar-brand text-white font-italic spacing-2px">
-            PROTESHOP
-          </h2>
-        </div>
-      </Link>
-      <div className="me-4 d-flex">
-        <Link to="/catalogue">
-          <button className="btn btn-dark btn-outline-light me-3 px-4 fs-5 ">
-            Catalogo
-          </button>
+          <span id="logo-title">PROTESHOP</span>
         </Link>
-        <NavDropdown />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mx-auto fs-5">
+            <Link to="/" onClick={() => scrollTo(0, 0)}>
+              <Button variant="dark btn-outline-light nav-btns">Home</Button>
+            </Link>
+            <Link to="/catalogue" onClick={() => scrollTo(0, 0)}>
+              <Button variant="dark btn-outline-light nav-btns">
+                Catalogo
+              </Button>
+            </Link>
+            <NavDropdown />
+          </Nav>
+          <CartWidget />
+        </Navbar.Collapse>
       </div>
-      <CartWidget />
-    </nav>
+    </Navbar>
   );
 };
 

@@ -8,7 +8,6 @@ import { doc, getDoc, getFirestore } from "firebase/firestore";
 const ItemDetailContainer = () => {
   const { id } = useParams();
   let [product, setProduct] = useState([]);
-  const [loading, setLoading] = useState(true);
   let { addProduct } = useContext(CartContext);
 
   const onAdd = (quantity) => {
@@ -21,16 +20,14 @@ const ItemDetailContainer = () => {
     getDoc(oneItem)
       .then((snapshot) => {
         if (snapshot.exists()) {
-          const docs = snapshot.data();
-          setProduct(docs);
+          const doc = { id: snapshot.id, ...snapshot.data() };
+          setProduct(doc);
         }
       })
       .catch((err) => console.log(err));
-
-    setLoading(false);
   }, []);
 
-  return loading ? (
+  return product.image == undefined ? (
     <Loading />
   ) : (
     <div className="min-vh-100">

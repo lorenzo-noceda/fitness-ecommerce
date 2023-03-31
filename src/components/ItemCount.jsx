@@ -33,7 +33,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
 
   const addToCartMessage = () => {
     toast.success("El producto fue añadido al carrito", {
-      position: "bottom-center",
+      position: "bottom-right",
       autoClose: 2000,
       pauseOnHover: false,
       theme: "colored",
@@ -75,7 +75,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
               variant="outline-primary mt-3 px-4"
               onClick={() => scrollTo(0, 0)}
             >
-              Ir al carrito
+              Finalizar compras
             </Button>
           </Link>
         </div>
