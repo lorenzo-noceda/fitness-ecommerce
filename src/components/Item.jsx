@@ -11,7 +11,7 @@ const Item = ({ name, id, category, image }) => {
           <Card.Title>{name}</Card.Title>
           <Card.Text>Categoria: {category}</Card.Text>
           <hr />
-          <Link to={`/catalogue/${id}`}>
+          <Link to={`/fitness-ecommerce/catalogue/${id}`}>
             <Button
               className="d-block mx-auto px-4 py-1 fs-5"
               onClick={() => scrollTo(0, 0)}

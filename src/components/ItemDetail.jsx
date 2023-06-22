@@ -26,7 +26,7 @@ const ItemDetail = ({
         </Card.Body>
       </Card>
       <div className="text-center">
-        <Link to="/catalogue">
+        <Link to="/fitness-ecommerce/catalogue">
           <Button variant="outline-light text-dark font-italic my-3">
             Volver al catalogo
           </Button>

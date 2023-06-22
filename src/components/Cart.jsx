@@ -23,7 +23,7 @@ const Cart = () => {
       .then((result) => {
         if (result.isConfirmed) {
           removeProduct(id);
-          cart.length == 1 && navigate("/catalogue");
+          cart.length == 1 && navigate("/fitness-ecommerce/catalogue");
           Swal.fire({
             icon: "success",
             text: "El producto fue eliminado",
@@ -73,7 +73,7 @@ const Cart = () => {
             </div>
           </div>
           <div className="text-center">
-            <Link to="/catalogue">
+            <Link to="/fitness-ecommerce/catalogue">
               <Button variant="outline-light text-dark font-italic my-3">
                 Seguir comprando
               </Button>

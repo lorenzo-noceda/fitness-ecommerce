@@ -70,7 +70,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
       </p>
       {cart.length >= 1 && (
         <div className="text-center">
-          <Link to="/cart">
+          <Link to="/fitness-ecommerce/cart">
             <Button
               variant="outline-primary mt-3 px-4"
               onClick={() => scrollTo(0, 0)}

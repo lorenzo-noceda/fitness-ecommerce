@@ -14,7 +14,7 @@ const CartWidget = () => {
         disabled={totalProducts == 0}
       >
         <Link
-          to="/cart"
+          to="/fitness-ecommerce/cart"
           onClick={() => scrollTo(0, 0)}
           className="btn btn-outline-light btn-sm"
         >

@@ -51,7 +51,7 @@ const SendOrder = () => {
               "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61iaYVAiQUL._AC_UF894,1000_QL80_.jpg",
           });
           clearCart();
-          navigate("/catalogue");
+          navigate("/fitness-ecommerce/catalogue");
         });
       });
     } else {
@@ -75,7 +75,7 @@ const SendOrder = () => {
       .then((result) => {
         if (result.isConfirmed) {
           clearCart();
-          navigate("/catalogue");
+          navigate("/fitness-ecommerce/catalogue");
           Swal.fire({
             icon: "success",
             text: "El carrito fue limpiado",

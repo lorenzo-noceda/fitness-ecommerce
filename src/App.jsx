@@ -14,21 +14,21 @@ const App = () => {
         <NavBar />
 
         <Routes>
-          <Route exact path="/" element={<Welcome />} />
+          <Route exact path="/fitness-ecommerce/" element={<Welcome />} />
           <Route
             exact
-            path="/catalogue"
+            path="/fitness-ecommerce/catalogue"
             element={<ItemListContainer greeting={"Catalogo de productos"} />}
           />
           <Route
             exact
-            path="/category/:category"
+            path="/fitness-ecommerce/category/:category"
             element={<ItemListContainer greeting={"Catalogo de productos"} />}
           />
-          <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/fitness-ecommerce/cart" element={<Cart />} />
           <Route
             exact
-            path="/catalogue/:id"
+            path="/fitness-ecommerce/catalogue/:id"
             element={<ItemDetailContainer />}
           />
         </Routes>

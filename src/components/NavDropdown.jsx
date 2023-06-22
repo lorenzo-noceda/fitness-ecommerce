@@ -10,17 +10,26 @@ const NavDropdown = () => {
           Categorias
         </Dropdown.Toggle>
         <Dropdown.Menu className="text-center">
-          <Link to="/category/Proteina" onClick={() => scrollTo(0, 0)}>
+          <Link
+            to="/fitness-ecommerce/category/Proteina"
+            onClick={() => scrollTo(0, 0)}
+          >
             <Dropdown.Item className="btn btn-light fs-5" as="li">
               Proteina
             </Dropdown.Item>
           </Link>
-          <Link to="/category/Creatina" onClick={() => scrollTo(0, 0)}>
+          <Link
+            to="/fitness-ecommerce/category/Creatina"
+            onClick={() => scrollTo(0, 0)}
+          >
             <Dropdown.Item className="btn btn-light fs-5 my-2" as="li">
               Creatina
             </Dropdown.Item>
           </Link>
-          <Link to="/category/Snacks" onClick={() => scrollTo(0, 0)}>
+          <Link
+            to="/fitness-ecommerce/category/Snacks"
+            onClick={() => scrollTo(0, 0)}
+          >
             <Dropdown.Item className="btn btn-light fs-5" as="li">
               Snacks
             </Dropdown.Item>
