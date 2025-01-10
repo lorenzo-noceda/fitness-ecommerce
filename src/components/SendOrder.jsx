@@ -48,7 +48,7 @@ const SendOrder = () => {
           Swal.fire({
             html: `<h4>Muchas gracias por confiar en <i>ProteShop</i>💪</h4>`,
             imageUrl:
-              "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61iaYVAiQUL._AC_UF894,1000_QL80_.jpg",
+              "https://img.asmedia.epimg.net/resizer/v2/DURLNQ67VFEWPP5DH5YW7Q3RUQ.jpg?auth=d0aacf907fc007cf570f5ea5014830ca90d68a5d6f87c1214642cad3a0149139&width=644&height=362&smart=true",
           });
           clearCart();
           navigate("/fitness-ecommerce/catalogue");
